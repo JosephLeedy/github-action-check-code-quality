@@ -5,7 +5,7 @@ on:
 
   push:
     branches:
-      - staging
+      - main
       - feature/*
 
   workflow_dispatch:
