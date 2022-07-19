@@ -23,7 +23,8 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2
+          #fetch-depth: 2
+          fetch-depth: 0 # Fetch entire history for testing purposes. Not recommended for large repositories.
 
       - name: Get changed files
         id: changes
