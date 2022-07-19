@@ -66,7 +66,7 @@ jobs:
             -o vendor/magento/magento-coding-standard/eslint/.eslintrc-magento
 
       - name: Check JavaScript syntax
-        run: npx eslint --output-file eslint_report.json --format json "${{needs.changed-files.outputs.js}}"
+        run: npx eslint --output-file eslint_report.json --format json ${{needs.changed-files.outputs.js}}
         continue-on-error: true
 
       - name: Annotate code linting results
@@ -111,10 +111,10 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: Check PHP Syntax
-        run: vendor/bin/parallel-lint --exclude .git --exclude vendor --checkstyle "${{needs.changed-files.outputs.php}}" | cs2pr
+        run: vendor/bin/parallel-lint --exclude .git --exclude vendor --checkstyle ${{needs.changed-files.outputs.php}} | cs2pr
 
       - name: Detect PHP coding standard violations
-        run: vendor/bin/phpcs -q --report=checkstyle "${{needs.changed-files.outputs.php}}" | cs2pr --graceful-warnings
+        run: vendor/bin/phpcs -q --report=checkstyle ${{needs.changed-files.outputs.php}} | cs2pr --graceful-warnings
 
       - name: Analyze PHP code for potential bugs
-        run: vendor/bin/phpstan analyse "${{needs.changed-files.outputs.php}}"
+        run: vendor/bin/phpstan analyse ${{needs.changed-files.outputs.php}}
