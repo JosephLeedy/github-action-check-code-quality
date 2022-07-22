@@ -14,6 +14,8 @@ jobs:
   changed-files:
     runs-on: ubuntu-latest
 
+    name: Gather Changelist
+
     outputs:
       all: ${{ steps.changes.outputs.all}}
       php: ${{ steps.changes.outputs.php }}
@@ -41,6 +43,8 @@ jobs:
 
   javscript-code-quality:
     runs-on: ubuntu-latest
+
+    name: Check JavaScript Code Quality
 
     needs: changed-files
 
@@ -77,6 +81,8 @@ jobs:
 
   php-code-quality:
     runs-on: ubuntu-latest
+
+    name: Check PHP Code Quality
 
     needs: changed-files
 
