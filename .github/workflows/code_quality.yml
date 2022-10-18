@@ -41,7 +41,7 @@ jobs:
             echo "js=$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .js$ | xargs)" >> $GITHUB_OUTPUT
           fi
 
-  javscript-code-quality:
+  javascript-code-quality:
     runs-on: ubuntu-latest
 
     name: Check JavaScript Code Quality
