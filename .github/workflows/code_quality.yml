@@ -97,7 +97,7 @@ jobs:
         with:
           php-version: 8.1
           coverage: none
-          tools: composer, cs2pr
+          tools: composer:2.2, cs2pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #COMPOSER_AUTH_JSON: '${{ secrets.COMPOSER_AUTH_JSON }}'
