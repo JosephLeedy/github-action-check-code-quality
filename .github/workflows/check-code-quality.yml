@@ -8,6 +8,11 @@ on:
         required: false
         default: 2
         description: "Number of code revisions to check out (\"O\" for all)"
+      base-branch:
+        type: string
+        required: false
+        default: develop
+        description: "Base Git branch (i.e. \"develop\" or \"main\")"
       node-version:
         type: string
         required: false
@@ -50,7 +55,7 @@ jobs:
           BASE_SHA="${{ github.event.before }}"
 
           if [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
-            BASE_SHA="main"
+            BASE_SHA="${{ inputs.base-branch }}"
           fi
 
           if [[ ! -z "${{ github.event.pull_request.base.sha }}" ]]; then
