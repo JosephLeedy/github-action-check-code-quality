@@ -7,7 +7,7 @@ on:
         type: number
         required: false
         default: 2
-        description: "Number of code revisions to check out (\"O\" for all)"
+        description: "Number of code revisions to check out (\"0\" for all)"
       base-branch:
         type: string
         required: false
