@@ -4,6 +4,19 @@ by Joseph Leedy
 Check Code Quality provides an automated process for verifying that code follows
 all required standards and does not introduce any potential bugs.
 
+## Prerequisites
+
+The following tools must installed as development dependencies in your project: 
+
+### PHP
+- [PHP Parallel Lint](https://github.com/php-parallel-lint/PHP-Parallel-Lint)
+- [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+  - [Magento Coding Standard](https://github.com/magento/magento-coding-standard)
+- [PHPStan](https://github.com/phpstan/phpstan)
+
+### JavaScript
+- [ESLint](https://github.com/eslint/eslint)
+
 ## Usage
 
 ### Example Workflow
