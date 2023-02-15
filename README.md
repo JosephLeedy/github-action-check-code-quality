@@ -23,7 +23,7 @@ on:
 jobs:
   check-code-quality:
     name: Check Code Quality
-    uses: JosephLeedy/action-check-code-quality/.github/workflows/check-code-quality.yml@main
+    uses: JosephLeedy/github-action-check-code-quality/.github/workflows/check-code-quality.yml@main
     with:
       php-version: 8.1
     secrets:
